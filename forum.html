@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="title">Форум</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/languages.js"></script>
+    <script src="js/languageSwitcher.js"></script>
+    <script src="script.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background: #35424a;
+            color: #ffffff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #e8491d;
+        }
+
+        main {
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+            background: #ffffff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        h1,
+        h2 {
+            color: #35424a;
+        }
+
+        .forum-topic {
+            border-bottom: 1px solid #e9ecef;
+            padding: 10px 0;
+        }
+
+        .forum-topic h3 {
+            margin: 0;
+        }
+
+        .forum-topic p {
+            margin: 5px 0;
+        }
+
+        .new-topic-form {
+            margin-top: 20px;
+            padding: 15px;
+            background: #e9ecef;
+            border-radius: 5px;
+        }
+
+        .new-topic-form input,
+        .new-topic-form textarea {
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .submit-button {
+            padding: 10px 20px;
+            background: #e8491d;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .submit-button:hover {
+            background: #d7371c;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px 0;
+            background: #35424a;
+            color: #ffffff;
+        }
+
+        /* Адаптивные стили */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+            }
+
+            main {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1 id="header">Форум</h1>
+        <nav>
+            <ul>
+                <li><a href="donation.html">Пожертвования</a></li>
+                <li><a href="https://deutsch4kball.github.io/All-About-Java/">Курсы</a></li>
+                <li><a href="forum.html">Форум</a></li>
+                <li><a href="reviews.html">Отзывы</a></li>
+            </ul>
+        </nav>
+        <div>
+            <button onclick="changeLanguage('en')">English</button>
+            <button onclick="changeLanguage('ru')">Русский</button>
+            <button onclick="changeLanguage('ua')">Українська</button>
+        </div>
+    </header>
+    <main>
+        <h2 id="intro">Обсуждения</h2>
+
+        <!-- Существующие темы форума -->
+        <div class="forum-topic">
+            <h3>Как начать изучать JavaScript?</h3>
+            <p>Автор: Иван</p>
+            <p>Я новичок в программировании. С чего мне начать изучение JavaScript?</p>
+        </div>
+
+        <div class="forum-topic">
+            <h3>Рекомендации по курсам</h3>
+            <p>Автор: Анна</p>
+            <p>Какие курсы по программированию вы можете порекомендовать для начинающих?</p>
+        </div>
+
+        <div class="forum-topic">
+            <h3>Лучшие практики в веб-разработке</h3>
+            <p>Автор: Сергей</p>
+            <p>Поделитесь своими лучшими практиками и советами в веб-разработке.</p>
+        </div>
+
+        <div class="new-topic-form">
+            <h3>Создать новую тему</h3>
+            <input type="text" placeholder="Заголовок темы" id="topic-title" required>
+            <textarea placeholder="Содержание темы" id="topic-content" rows="4" required></textarea>
+            <button class="submit-button" onclick="submitNewTopic()">Создать тему</button>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 - 2025 Форум. Все права защищены.</p>
+    </footer>
+
+    <script>
+        function submitNewTopic() {
+            const title = document.getElementById('topic-title').value;
+            const content = document.getElementById('topic-content').value;
+
+            if (title && content) {
+                const newTopic = document.createElement('div');
+                newTopic.classList.add('forum-topic');
+                newTopic.innerHTML = `<h3>${title}</h3><p>Автор: Ваше имя</p><p>${content}</p>`;
+                document.querySelector('main').insertBefore(newTopic, document.querySelector('.new-topic-form'));
+
+                // Очистка полей ввода
+                document.getElementById('topic-title').value = '';
+                document.getElementById('topic-content').value = '';
+            } else {
+                alert('Пожалуйста, заполните все поля.');
+            }
+        }
+    </script>
+</body>
+
+</html>
+</body>
+
+</html>

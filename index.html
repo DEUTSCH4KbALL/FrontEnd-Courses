@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="shortcut icon" href="./images/Logo.webp" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Courses</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <h1>Online Learning Platform</h1>
+        <nav>
+            <ul>
+                <li><a href="#" id="html-tab" class="active">HTML Courses</a></li>
+                <li><a href="#" id="css-tab">CSS Courses</a></li>
+                <li><a href="#" id="js-tab">JavaScript Courses</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="content">
+        <section id="html-content" class="tab-content active">
+            <h2>HTML Courses <i class="fas fa-code"></i></h2>
+            <p>Learn the basics and advanced techniques of HTML.</p>
+            <div class="course-card">
+                <img src="images/html-course.jpg" alt="HTML Course">
+                <h3>Introduction to HTML</h3>
+                <p>Overview of HTML structure and syntax. Importance of HTML in web development.</p>
+                <button class="open-modal" data-course="HTML Course Details">More Details</button>
+            </div>
+            <div class="course-card">
+                <h3>Beginner Courses</h3>
+                <ul>
+                    <li><strong>HTML Basics:</strong> Learn about elements, tags, and attributes. Create your first web
+                        page.</li>
+                    <li><strong>Forms and Input Elements:</strong> Understand how to create forms for user input.
+                        Explore different input types and validation.</li>
+                    <li><strong>HTML Semantics:</strong> Learn about semantic HTML and its importance for SEO and
+                        accessibility.</li>
+                </ul>
+            </div>
+            <div class="course-card">
+                <h3>Advanced Courses</h3>
+                <ul>
+                    <li><strong>HTML5 Features:</strong> Discover new elements and APIs introduced in HTML5. Learn about
+                        semantic HTML and its benefits.</li>
+                    <li><strong>Accessibility in HTML:</strong> Best practices for making web content accessible. Use of
+                        ARIA roles and attributes.</li>
+                    <li><strong>HTML and SEO:</strong> Understand how to optimize your HTML for search engines.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="css-content" class="tab-content">
+            <h2>CSS Courses <i class="fas fa-paint-brush"></i></h2>
+            <p>Master the art of styling and layout with CSS.</p>
+            <div class="course-card">
+                <img src="images/css-course.jpg" alt="CSS Course">
+                <h3>Introduction to CSS</h3>
+                <p>Explanation of CSS and its role in web design. How CSS enhances the visual presentation of web pages.
+                </p>
+                <button class="open-modal" data-course="CSS Course Details">More Details</button>
+            </div>
+            <div class="course-card">
+                <h3>Beginner Courses</h3>
+                <ul>
+                    <li><strong>CSS Fundamentals:</strong> Learn about selectors, properties, and values. Create simple
+                        styles for your HTML elements.</li>
+                    <li><strong>Box Model and Layout:</strong> Understand the box model concept. Explore margin,
+                        padding, and border properties.</li>
+                    <li><strong>CSS Flexbox:</strong> Learn how to create flexible layouts using Flexbox.</li>
+                </ul>
+            </div>
+            <div class="course-card">
+                <h3>Advanced Courses</h3>
+                <ul>
+                    <li><strong>Responsive Design:</strong> Techniques for creating mobile-friendly layouts. Use of
+                        media queries and flexible grids.</li>
+                    <li><strong>CSS Preprocessors:</strong> Introduction to SASS and LESS. Benefits of using
+                        preprocessors for CSS development.</li>
+                    <li><strong>CSS Animations:</strong> Learn how to create engaging animations with CSS.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="js-content" class="tab-content">
+            <h2>JavaScript Courses <i class="fas fa-laptop-code"></i></h2>
+            <p>Discover the power of JavaScript for dynamic web development.</p>
+            <div class="course-card">
+                <img src="images/js-course.jpg" alt="JavaScript Course">
+                <h3>Introduction to JavaScript</h3>
+                <p>Overview of JavaScript and its significance in web development. How JavaScript interacts with HTML
+                    and CSS.</p>
+                <button class="open-modal" data-course="JavaScript Course Details">More Details</button>
+            </div>
+            <div class="course-card">
+                <h3>Beginner Courses</h3>
+                <ul>
+                    <li><strong>JavaScript Basics:</strong> Learn about variables, data types, and operators. Write your
+                        first JavaScript program.</li>
+                    <li><strong>DOM Manipulation:</strong> Understand the Document Object Model (DOM). Learn how to
+                        manipulate HTML elements with JavaScript.</li>
+                    <li><strong>Event Handling:</strong> Learn how to handle user events like clicks and keyboard input.
+                    </li>
+                </ul>
+            </div>
+            <div class="course-card">
+                <h3>Advanced Courses</h3>
+                <ul>
+                    <li><strong>Asynchronous JavaScript:</strong> Introduction to callbacks, promises, and async/await.
+                        Handling asynchronous operations in web applications.</li>
+                    <li><strong>JavaScript Frameworks:</strong> Overview of popular frameworks like React, Angular, and
+                        Vue.js. Benefits of using frameworks for building complex applications.</li>
+                    <li><strong>JavaScript ES6 Features:</strong> Learn about the new features introduced in ES6, such
+                        as arrow functions, classes, and modules.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section>
+            <h2>Student Testimonials</h2>
+            <div class="testimonial">
+                <p><strong>Ivan Petrov:</strong> "The courses were very informative and useful. I learned to create my
+                    first web pages!"</p>
+            </div>
+            <div class="testimonial">
+                <p><strong>Maria Smirnova:</strong> "Great courses! The instructors explain the material clearly and
+                    understandably."</p>
+            </div>
+            <div class="testimonial">
+                <p><strong>Alexey Ivanov:</strong> "I recommend this platform to anyone who wants to learn web
+                    development!"</p>
+            </div>
+        </section>
+
+        <!-- Advantages Section -->
+        <section>
+            <h2>Why Choose Us?</h2>
+            <div class="advantages">
+                <div class="advantage">
+                    <i class="fas fa-graduation-cap fa-2x"></i>
+                    <h3>Quality Education</h3>
+                    <p>Our courses are designed by professionals in the field of web development.</p>
+                </div>
+                <div class="advantage">
+                    <i class="fas fa-clock fa-2x"></i>
+                    <h3>Flexible Schedule</h3>
+                    <p>Learn at your own pace and at a time that suits you.</p>
+                </div>
+                <div class="advantage">
+                    <i class="fas fa-comments fa-2x"></i>
+                    <h3>Community Support</h3>
+                    <p>Join our community of students and instructors.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Feedback Form Section -->
+        <section>
+            <h2>Leave Your Feedback</h2>
+            <form class="feedback-form">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Feedback" rows="4" required></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+
+        <!-- Scroll to Top Button -->
+        <button class="scroll-to-top" id="scrollToTopBtn">Scroll to Top</button>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <h1><span class="cyan">Online Learning Platform</span></h1>
+                <p>Your trusted partner in the world of online education.</p>
+            </div>
+            <div class="footer-links">
+                <h3>Information</h3>
+                <ul>
+                    <li><a href="about-us.html">About us</a></li>
+                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="terms-of-service.html">Terms of Use</a></li>
+                    <li><a href="faq.html">Frequently Asked Questions</a></li>
+                    <li><a href="reviews.html">Reviews</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h3>Contact</h3>
+                <p><i class="fa-solid fa-envelope"></i> <a
+                        href="mailto:denispahomov01@gmail.com">denispahomov01@gmail.com</a></p>
+                <p><i class="fa-solid fa-phone"></i> <span>+38 (099) 683-084-0</span></p>
+                <div class="working-hours">
+                    <b>Opening hours:</b>
+                    <ul>
+                        <li>MN - FR: 9:00 - 18:00</li>
+                        <li>ST: 10:00 - 16:00</li>
+                        <li>SN: Weekend</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-newsletter">
+                <h3>Subscribe to news</h3>
+                <a href="./subscribe.html"><button class="subscribe-button">Subscribe</button></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="social-icons">
+                <h3>Follow us</h3>
+                <a href="https://github.com/DEUTSCH4KbALL" target="_blank" aria-label="Facebook">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+                <a href="https://www.tiktok.com/@deutsch_ball_offi" target="_blank" aria-label="Twitter">
+                    <i class="fa-brands fa-tiktok"></i>
+                </a>
+                <a href="https://t.me/DEUTSCHLAND_IST_GUT" target="_blank" aria-label="Telegram">
+                    <i class="fa-brands fa-telegram"></i>
+                </a>
+            </div>
+            <p>© 2024 - 2025 Online Learning Platform. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Modal Window -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modalTitle">Course</h2>
+            <p id="modalDescription">Here will be additional information about the course.</p>
+            <h3>Course Description:</h3>
+            <p id="modalFullDescription">This course covers all aspects of HTML, from basics to advanced topics. You
+                will learn to create web pages using semantic HTML and master best practices in web development.</p>
+            <h3>Course Goals:</h3>
+            <ul id="modalGoals">
+                <li>Understand the structure of an HTML document.</li>
+                <li>Learn to use tags and attributes.</li>
+                <li>Create forms and handle user input.</li>
+                <li>Study semantic HTML5 elements.</li>
+                <li>Optimize HTML for SEO.</li>
+            </ul>
+            <h3>Course Topics:</h3>
+            <ul id="modalTopics">
+                <li>Introduction to HTML</li>
+                <li>Structure of an HTML Document</li>
+                <li>Tags and Attributes</li>
+                <li>Forms and Input Elements</li>
+                <li>Semantic HTML</li>
+                <li>HTML and SEO</li>
+            </ul>
+            <h3>Course Duration:</h3>
+            <p id="modalDuration">4 weeks (2 hours per week)</p>
+            <h3>Difficulty Level:</h3>
+            <p id="modalLevel">Beginner</p>
+            <h3>Instructors:</h3>
+            <p id="modalInstructors">Ilya Nagnybida, Evgenia Alexandrovna, Sergey Semervail (Yellir Iss), Sergey
+                Isheryakov</p>
+            <h3>Principal:</h3>
+            <p id="modalPrincipal">Denys Pakhomov</p>
+            <h3>Student Reviews:</h3>
+            <p id="modalStudentReviews">"The course was very useful and informative. I learned to create my first web
+                pages!" - Anton Petrov</p>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript for tab switching
+        const tabs = document.querySelectorAll('nav ul li a');
+        const tabContents = document.querySelectorAll('.tab-content');
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', (event) => {
+                event.preventDefault();
+
+                // Remove active class from all tabs and hide all content
+                tabs.forEach(t => t.classList.remove('active'));
+                tabContents.forEach(content => content.classList.remove('active'));
+
+                // Add active class to the current tab and show corresponding content
+                tab.classList.add('active');
+                const targetContent = document.getElementById(tab.id.replace('-tab', '-content'));
+                targetContent.classList.add('active');
+            });
+        });
+
+        // Modal functionality
+        const modal = document.getElementById("myModal");
+        const modalTitle = document.getElementById("modalTitle");
+        const modalDescription = document.getElementById("modalDescription");
+        const closeModal = document.getElementsByClassName("close")[0];
+
+        document.querySelectorAll('.open-modal').forEach(button => {
+            button.onclick = function () {
+                modal.style.display = "block";
+                modalTitle.textContent = this.dataset.course;
+
+                // Logic to populate modal with course information
+                if (this.dataset.course === "HTML Course Details") {
+                    modalDescription.textContent = "HTML Course Overview";
+                    document.getElementById("modalFullDescription").textContent = "This course covers all aspects of HTML, from basics to advanced topics. You will learn to create web pages using semantic HTML and master best practices in web development.";
+                    document.getElementById("modalGoals").innerHTML = "<li>Understand the structure of an HTML document.</li><li>Learn to use tags and attributes.</li><li>Create forms and handle user input.</li><li>Study semantic HTML5 elements.</li><li>Optimize HTML for SEO.</li>";
+                    document.getElementById("modalTopics").innerHTML = "<li>Introduction to HTML</li><li>Structure of an HTML Document</li><li>Tags and Attributes</li><li>Forms and Input Elements</li><li>Semantic HTML</li><li>HTML and SEO</li>";
+                    document.getElementById("modalDuration").textContent = "4 weeks (4 hours per week)";
+                    document.getElementById("modalLevel").textContent = "Beginner";
+                    document.getElementById("modalInstructors").textContent = "Ilya Nagnybida, Evgenia Alexandrovna";
+                    document.getElementById("modalPrincipal").textContent = "Denys Pakhomov";
+                    document.getElementById("modalStudentReviews").textContent = '"The course was very useful and informative. I learned to create my first web pages!" - Ivan Petrov';
+                } else if (this.dataset.course === "CSS Course Details") {
+                    modalDescription.textContent = "CSS Course Overview";
+                    document.getElementById("modalFullDescription").textContent = "This course covers the basics of CSS, including selectors, properties, and values. You will learn to create stylish and responsive web pages.";
+                    document.getElementById("modalGoals").innerHTML = "<li>Understand the basics of CSS and its role in web design.</li><li>Learn to use various selectors and properties.</li><li>Create responsive and cross-browser styles.</li><li>Study Flexbox and Grid for layout creation.</li>";
+                    document.getElementById("modalTopics").innerHTML = "<li>Introduction to CSS</li><li>Selectors and Properties</li><li>Box Model</li><li>Flexbox and Grid</li><li>Responsive Design</li>";
+                    document.getElementById("modalDuration").textContent = "4 weeks (2 hours per week)";
+                    document.getElementById("modalLevel").textContent = "Beginner";
+                    document.getElementById("modalInstructors").textContent = "Ilya Nagnybida, Evgenia Alexandrovna, Sergey Semervail (Yellir Iss), Sergey Isheryakov";
+                    document.getElementById("modalStudentReviews").textContent = '"The course was very informative and useful!" - Anna Kuznetsova';
+                } else if (this.dataset.course === "JavaScript Course Details") {
+                    modalDescription.textContent = "JavaScript Course Overview";
+                    document.getElementById("modalFullDescription").textContent = "This course covers the basics of JavaScript, including variables, functions, and working with the DOM. You will learn to create interactive web applications.";
+                    document.getElementById("modalGoals").innerHTML = "<li>Understand the basics of JavaScript and its syntax.</li><li>Learn to work with variables and functions.</li><li>Study DOM manipulation.</li><li>Create interactive elements on web pages.</li>";
+                    document.getElementById("modalTopics").innerHTML = "<li>Introduction to JavaScript</li><li>Variables and Data Types</li><li>Functions and Events</li><li>Working with the DOM</li><li>Asynchronous JavaScript</li>";
+                    document.getElementById("modalDuration").textContent = "6 weeks (2 hours per week)";
+                    document.getElementById("modalLevel").textContent = "Beginner";
+                    document.getElementById("modalInstructors").textContent = "Ilya Nagnybida, Evgenia Alexandrovna, Sergey Isheryakov";
+                    document.getElementById("modalStudentReviews").textContent = '"The course opened up the world of JavaScript for me!" - Sergey Ivanov';
+                }
+            }
+        });
+
+        // Close modal functionality
+        closeModal.onclick = function () {
+            modal.style.display = "none";
+        }
+
+        // Close modal when clicking outside of it
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+
+        // Scroll to Top Button functionality
+        const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+        window.onscroll = function () {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                scrollToTopBtn.style.display = "block";
+            } else {
+                scrollToTopBtn.style.display = "none";
+            }
+        };
+
+        scrollToTopBtn.onclick = function () {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        };
+
+        document.querySelector('.subscribe-button').addEventListener('click', function () {
+            const email = prompt("Enter your email for subscribe on news:");
+            if (email) {
+                alert(`Thank you for subscribe, ${email}!`);
+                // Здесь можно добавить логику для отправки email на сервер
+            } else {
+                alert("Please, enter your email.");
+            }
+        });
+    </script>
+</body>
+
+</html>

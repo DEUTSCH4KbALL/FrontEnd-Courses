@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="title">Поддержите нас</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/languages.js"></script>
+    <script src="js/languageSwitcher.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background: #35424a;
+            color: #ffffff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #e8491d;
+        }
+
+        main {
+            padding: 20px;
+            max-width: 600px;
+            margin: auto;
+            background: #ffffff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        h1,
+        h2 {
+            color: #35424a;
+        }
+
+        p {
+            line-height: 1.6;
+        }
+
+        .donation-info {
+            background: #e9ecef;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+
+        .donation-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #e8491d;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .donation-button:hover {
+            background: #d7371c;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px 0;
+            background: #35424a;
+            color: #ffffff;
+        }
+
+        /* Адаптивные стили */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+            }
+
+            main {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1 id="header">Поддержите нашу платформу</h1>
+        <nav>
+            <ul>
+                <li><a href="donation.html">Пожертвования</a></li>
+                <li><a href="https://deutsch4kball.github.io/All-About-Java/">Курсы</a></li>
+                <li><a href="forum.html">Форум</a></li>
+                <li><a href="reviews.html">Отзывы</a></li>
+            </ul>
+        </nav>
+        <div>
+            <button onclick="changeLanguage('en')">English</button>
+            <button onclick="changeLanguage('ru')">Русский</button>
+            <button onclick="changeLanguage('ua')">Українська</button>
+        </div>
+    </header>
+    <main>
+        <h2 id="intro">Дорогие друзья!</h2>
+        <p id="paragraph1">Мы рады, что вы с нами на нашем пути обучения и развития. Наша платформа предоставляет
+            качественные курсы, которые помогают людям развивать свои навыки и достигать новых высот.</p>
+        <p id="paragraph2">Однако, чтобы продолжать предоставлять вам лучшие ресурсы и улучшать наш сервис, нам нужна
+            ваша поддержка.</p>
+
+        <div class="donation-info">
+            <h3 id="donationInfo">Как вы можете помочь:</h3>
+            <p id="cardNumber"><strong>Номер карты: 5168 7520 2905 2811</strong></p>
+            <p id="thankYou">Спасибо за вашу поддержку! Мы ценим каждого из вас.</p>
+            <a href="mailto:support@example.com" class="donation-button" id="contact">Связаться с нами</a>
+    </main>
+    <footer>
+        <p id="footer">&copy; 2024 - 2025 Online Course Platform. Все права защищены.</p>
+    </footer>
+</body>
+
+</html>

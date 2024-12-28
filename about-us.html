@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <h1>About Us</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about-us.html">About Us</a></li>
+                <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                <li><a href="terms-of-service.html">Terms of Use</a></li>
+                <li><a href="faq.html">Frequently Asked Questions</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+                <li><a href="donation.html">Donation :></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="mission">
+            <h2>Our Mission</h2>
+            <p>We strive to provide quality online education for everyone who wants to learn.</p>
+        </section>
+        <section class="team">
+            <h2>Our Team</h2>
+            <div class="team-member">
+                <img src="./images/Illya.jpg" alt="Team Member 1">
+                <h3>Nagnybida Illya</h3>
+                <p>Web Developer</p>
+            </div>
+            <div class="team-member">
+                <img src="./images/SergeyIsheryakow.jpg" alt="Team Member 2">
+                <h3>Sergey Isheryakov</h3>
+                <p>JavaScript Developer</p>
+            </div>
+            <div class="team-member">
+                <img src="./images/yellir.jpg" alt="Team Member 2">
+                <h3>Yellir Iss</h3>
+                <p>Java Developer</p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 - 2025 Your Company Name. All rights reserved.</p>
+        <div class="social-icons">
+            <h3>Follow us</h3>
+            <a href="https://github.com/DEUTSCH4KbALL" target="_blank" aria-label="Facebook">
+                <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="https://www.tiktok.com/@deutsch_ball_offi" target="_blank" aria-label="Twitter">
+                <i class="fa-brands fa-tiktok"></i>
+            </a>
+            <a href="https://t.me/DEUTSCHLAND_IST_GUT" target="_blank" aria-label="Telegram">
+                <i class="fa-brands fa-telegram"></i>
+            </a>
+        </div>
+    </footer>
+    <script>
+        // Smooth scrolling for internal links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Scroll to top button
+        const scrollToTopBtn = document.createElement('button');
+        scrollToTopBtn.innerHTML = '↑';
+        scrollToTopBtn.id = 'scrollToTopBtn';
+        scrollToTopBtn.style.display = 'none';
+        scrollToTopBtn.style.position = 'fixed';
+        scrollToTopBtn.style.bottom = '20px';
+        scrollToTopBtn.style.right = '20px';
+        scrollToTopBtn.style.backgroundColor = '#e8491d';
+        scrollToTopBtn.style.color = '#fff';
+        scrollToTopBtn.style.border = 'none';
+        scrollToTopBtn.style.borderRadius = '5px';
+        scrollToTopBtn.style.padding = '10px';
+        scrollToTopBtn.style.cursor = 'pointer';
+        document.body.appendChild(scrollToTopBtn);
+
+        window.onscroll = function () {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                scrollToTopBtn.style.display = 'block';
+            } else {
+                scrollToTopBtn.style.display = 'none';
+            }
+        };
+
+        scrollToTopBtn.onclick = function () {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        };
+
+        // Modal for team member details
+        const teamMembers = document.querySelectorAll('.team-member');
+        teamMembers.forEach(member => {
+            member.addEventListener('click', () => {
+                const name = member.querySelector('h3').innerText;
+                const role = member.querySelector('p').innerText;
+                alert(`Name: ${name}\nRole: ${role}`);
+            });
+        });
+    </script>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background: #35424a;
+            color: #ffffff;
+            padding: 20px 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #e8491d;
+        }
+
+        main {
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+            background: #ffffff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        section {
+            margin-bottom: 20px;
+        }
+
+        .team {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .team-member {
+            text-align: center;
+            margin: 10px;
+            transition: transform 0.3s;
+        }
+
+        .team-member img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            transition: transform 0.3s;
+        }
+
+        .team-member:hover img {
+            transform: scale(1.1);
+        }
+
+        .team-member:hover {
+            transform: translateY(-5px);
+        }
+
+        footer {
+            background: #35424a;
+            color: #ffffff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .social-icons {
+            margin-top: 10px;
+        }
+
+        .social-icons a {
+            color: #ffffff;
+            margin: 0 10px;
+            font-size: 24px;
+            transition: color 0.3s;
+        }
+
+        .social-icons a:hover {
+            color: #e8491d;
+            /* Color on hover */
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .team {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav ul li {
+                display: block;
+                margin: 10px 0;
+            }
+        }
+    </style>
+</body>
+
+</html>
